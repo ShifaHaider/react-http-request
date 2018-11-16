@@ -9,7 +9,6 @@ import Third from './routes/third-rout'
 import Fourth from './routes/fourth-route'
 import Fifth from './routes/fifth-route'
 import Main from './main.js';
-//import Login from './login.js';
 const history = createBrowserHistory();
 var config = {
     apiKey: "AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI",
