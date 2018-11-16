@@ -4,6 +4,7 @@ import Express from "./express-server/express-server";
 import {Router, Route, Switch, Link} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 import Main from './main.js';
+import firebase from 'firebase'
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
 //import Third from './routes/third-rout'
