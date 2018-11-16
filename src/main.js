@@ -69,7 +69,7 @@ class Main extends Component {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" color="inherit" className={styles.grow}>
-                            News
+                            New
                         </Typography>
                         <Button color="inherit" onClick={this.handleClickOpen}>Login</Button>
                     </Toolbar>
