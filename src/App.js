@@ -8,6 +8,7 @@ import Second from './routes/second-route'
 import Third from './routes/third-rout'
 import Fourth from './routes/fourth-route'
 import Fifth from './routes/fifth-route'
+import Main from './main.js'
 const history = createBrowserHistory();
 
 class App extends Component {
@@ -15,24 +16,23 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-             {/*<Express/>*/}
-
                 <Router history={history}>
                     <div>
                         <Switch>
-                            <Route exact path={'/'} component={Express}/>
-                            <Route exact path={'/first-route'} component={First}/>
-                            <Route exact path={'/second-route'} component={Second}/>
-                            <Route exact path={'/third-route'} component={Third}/>
-                            <Route exact path={'/fourth-route'} component={Fourth}/>
-                            <Route exact path={'/fifth-route'} component={Fifth}/>
+                            <Route exact path={'/'} component={Main}/>
                         </Switch>
                     </div>
                 </Router>
-
             </div>
         );
     }
 }
 
 export default App;
+
+
+//<Route exact path={'/first-route'} component={First}/>
+//<Route exact path={'/second-route'} component={Second}/>
+//    <Route exact path={'/third-route'} component={Third}/>
+//    <Route exact path={'/fourth-route'} component={Fourth}/>
+//    <Route exact path={'/fifth-route'} component={Fifth}/>
