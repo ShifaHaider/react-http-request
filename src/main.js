@@ -5,6 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import TextField from '@material-ui/core/TextField';
+import NavigationIcon from '@material-ui/icons/Navigation';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const styles = {
     root: {
@@ -19,16 +26,43 @@ const styles = {
     }
 };
 class Main extends Component {
-   constructor(props){
-       super(props);
-       console.log(props);
-   }
+    constructor(props) {
+        super(props);
+        this.state = {
+            open: false
+        }
+    }
+    handleClickOpen = () => {
+        this.setState({ open: true });
+    };
 
-    render(){
+    handleClose = () => {
+        this.setState({ open: false });
+    };
+
+    //loginGoogle() {
+    //    var provider = new firebase.auth.GoogleAuthProvider();
+    //    provider.addScope('https://www.googleapis.com/auth/plus.login');
+    //    firebase.auth().signInWithPopup(provider).then((result) => {
+    //        console.log(result);
+    //        var profile = result.additionalUserInfo.profile;
+    //        console.log(profile);
+    //        var data = {};
+    //        data.name = profile.name;
+    //        data.email = profile.email;
+    //        data.id = result.user.uid;
+    //        this.checkAccount(data);
+    //    }).catch((function (error) {
+    //            console.log(error);
+    //        })
+    //    )
+    //}
+
+    render() {
         const { classes } = this.props;
-        console.log({ classes } );
-        return(
-            <div className={styles.root} >
+        console.log({classes});
+        return (
+            <div >
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton className={styles.menuButton} color="inherit" aria-label="Menu">
@@ -37,9 +71,34 @@ class Main extends Component {
                         <Typography variant="h6" color="inherit" className={styles.grow}>
                             News
                         </Typography>
-                        <Button color="inherit">Login</Button>
+                        <Button color="inherit" onClick={this.handleClickOpen}>Login</Button>
                     </Toolbar>
                 </AppBar>
+                <Dialog style={{width: '500px'}}
+                    open={this.state.open}
+                    onClose={this.handleClose}
+                    aria-labelledby="form-dialog-title">
+                    <List>
+                        <ListItem>
+                            <Button variant="extendedFab" aria-label="Delete" >
+                                <NavigationIcon />
+                                SignIn with google
+                            </Button>
+                        </ListItem>
+                        <ListItem>
+                            <Button variant="extendedFab" aria-label="Delete" >
+                                <NavigationIcon />
+                                SignIn with facebook
+                            </Button>
+                        </ListItem>
+                    </List>
+                    <DialogActions>
+                        <Button onClick={this.handleClose} color="primary">
+                            Cancel
+                        </Button>
+
+                    </DialogActions>
+                </Dialog>
             </div>
         )
     }

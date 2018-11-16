@@ -8,8 +8,18 @@ import Second from './routes/second-route'
 import Third from './routes/third-rout'
 import Fourth from './routes/fourth-route'
 import Fifth from './routes/fifth-route'
-import Main from './main.js'
+import Main from './main.js';
+//import Login from './login.js';
 const history = createBrowserHistory();
+var config = {
+    apiKey: "AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI",
+    authDomain: "todo-app-70ec2.firebaseapp.com",
+    databaseURL: "https://todo-app-70ec2.firebaseio.com",
+    projectId: "todo-app-70ec2",
+    storageBucket: "todo-app-70ec2.appspot.com",
+    messagingSenderId: "130211320230"
+};
+firebase.initializeApp(config);
 
 class App extends Component {
 
