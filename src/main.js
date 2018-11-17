@@ -54,7 +54,9 @@ class Main extends Component {
             var data = {};
             data.name = profile.name;
             data.email = profile.email;
+            data.picture = profile.picture;
             data.id = result.user.uid;
+
             db.collection('Users').doc(data.id).set(data);
             this.props.history.push('/dashboard');
         }).catch((function (error) {
@@ -65,7 +67,6 @@ class Main extends Component {
 
     render() {
         const { classes } = this.props;
-        console.log({classes});
         return (
             <div >
                 <AppBar position="static">
