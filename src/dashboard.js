@@ -11,7 +11,7 @@ class Dashboard extends Component {
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="h6" color="inherit">
-                           Dashboard
+                           Post
                         </Typography>
                         <Button color="inherit" onClick={this.handleClickOpen}>Login</Button>
                     </Toolbar>

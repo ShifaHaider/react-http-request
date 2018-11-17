@@ -56,7 +56,6 @@ class Main extends Component {
             data.email = profile.email;
             data.picture = profile.picture;
             data.id = result.user.uid;
-
             db.collection('Users').doc(data.id).set(data);
             this.props.history.push('/dashboard');
         }).catch((function (error) {
