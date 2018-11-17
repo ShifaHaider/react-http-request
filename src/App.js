@@ -5,6 +5,8 @@ import {Router, Route, Switch, Link} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 import Main from './main.js';
 import firebase from 'firebase'
+import Dashboard from './dashboard.js'
+
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
 //import Third from './routes/third-rout'
@@ -31,6 +33,7 @@ class App extends Component {
                     <div>
                         <Switch>
                             <Route exact path={'/'} component={Main}/>
+                            <Route exact path={'/dashboard'} component={Dashboard}/>
                         </Switch>
                     </div>
                 </Router>
