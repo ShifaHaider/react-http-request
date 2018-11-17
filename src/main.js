@@ -42,22 +42,22 @@ class Main extends Component {
     };
 
     loginGoogle() {
-        console.log('OK');
-        //var provider = new firebase.auth.GoogleAuthProvider();
-        //provider.addScope('https://www.googleapis.com/auth/plus.login');
-        //firebase.auth().signInWithPopup(provider).then((result) => {
-        //    console.log(result);
-        //    var profile = result.additionalUserInfo.profile;
-        //    console.log(profile);
-        //    var data = {};
-        //    data.name = profile.name;
-        //    data.email = profile.email;
-        //    data.id = result.user.uid;
-        //    this.checkAccount(data);
-        //}).catch((function (error) {
-        //        console.log(error);
-        //    })
-        //)
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.addScope('https://www.googleapis.com/auth/plus.login');
+        firebase.auth().signInWithPopup(provider).then((result) => {
+            console.log(result);
+            var profile = result.additionalUserInfo.profile;
+            console.log(profile);
+            var data = {};
+            data.name = profile.name;
+            data.email = profile.email;
+            data.id = result.user.uid;
+
+            this.checkAccount(data);
+        }).catch((function (error) {
+                console.log(error);
+            })
+        )
     }
 
     render() {
