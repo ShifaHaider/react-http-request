@@ -42,7 +42,9 @@ class Main extends Component {
     };
 
     loginGoogle() {
-        var db = firebase.firestore();
+        const db = firebase.firestore();
+        const settings = {timestampsInSnapshots: true};
+        db.settings(settings);
         var provider = new firebase.auth.GoogleAuthProvider();
         provider.addScope('https://www.googleapis.com/auth/plus.login');
         firebase.auth().signInWithPopup(provider).then((result) => {
@@ -55,29 +57,12 @@ class Main extends Component {
             data.id = result.user.uid;
             db.collection('Users').doc(data.id).set(data);
             this.props.history.push('/dashboard');
-            //this.checkAccount(data);
         }).catch((function (error) {
-                console.log(error);
+                alert(error);
             })
         )
     }
-    checkAccount(data) {
-        var db = firebase.firestore();
-        db.collection('Users').doc(data.id).get().then((userData) => {
-            console.log(userData);
-            if(userData.exists){
-                localStorage.setItem('userId' , data.id);
-                this.props.history.push('/dashboard');
-            }
-            else {
-                db.collection('Users').doc(data.id).set(data).then(()=>{
-                    localStorage.setItem('userId' , data.id);
-                    this.props.history.push('/dashboard');
-                })
-            }
-        });
-        console.log(data);
-    }
+
     render() {
         const { classes } = this.props;
         console.log({classes});
