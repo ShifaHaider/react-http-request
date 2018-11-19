@@ -7,7 +7,7 @@ import firebase from 'firebase'
 import Main from './components/main.js';
 import Dashboard from './components/dashboard.js';
 import Post from './components/post.js'
-
+import ViewItem from './components/view-item.js'
 
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
@@ -37,6 +37,7 @@ class App extends Component {
                             <Route exact path={'/'} component={Main}/>
                             <Route exact path={'/dashboard'} component={Dashboard}/>
                             <Route exact path={'/post'} component={Post}/>
+                            <Route exact path={'/view-item'} component={ViewItem}/>
                         </Switch>
                     </div>
                 </Router>

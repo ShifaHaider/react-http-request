@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/view-item.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/dashboard.js" afterPath="$PROJECT_DIR$/src/components/dashboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/main.js" afterPath="$PROJECT_DIR$/src/components/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/post.js" afterPath="$PROJECT_DIR$/src/components/post.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/view-item.js" afterPath="$PROJECT_DIR$/src/components/view-item.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,10 +31,10 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+              <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
               <folding>
-                <element signature="e#408#450#0" expanded="false" />
-                <element signature="e#1579#1635#0" expanded="false" />
+                <element signature="e#456#498#0" expanded="false" />
+                <element signature="e#1711#1767#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -46,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#handleClose#0;n#Dashboard#0" expanded="false" />
                 <element signature="n#!!block;n#handleClickOpen#0;n#Dashboard#0" expanded="false" />
@@ -55,8 +53,6 @@
                 <element signature="n#!!block;n#priceChange#0;n#Dashboard#0" expanded="false" />
                 <element signature="n#!!block;n#description#0;n#Dashboard#0" expanded="false" />
                 <element signature="n#!!block;n#sendPost#0;n#Dashboard#0" expanded="false" />
-                <element signature="e#2792#3258#0" expanded="false" />
-                <element signature="e#3276#5120#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -65,8 +61,8 @@
       <file leaf-file-name="view-item.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4875">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -131,10 +127,10 @@
         <option value="$PROJECT_DIR$/src/login.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/dashboard.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/style.css" />
         <option value="$PROJECT_DIR$/src/components/post.js" />
         <option value="$PROJECT_DIR$/src/components/main.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/dashboard.js" />
         <option value="$PROJECT_DIR$/src/components/view-item.js" />
       </list>
@@ -716,17 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
-          <folding>
-            <element signature="e#408#450#0" expanded="false" />
-            <element signature="e#1579#1635#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/post.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -743,10 +728,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+          <folding>
+            <element signature="e#456#498#0" expanded="false" />
+            <element signature="e#1711#1767#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#handleClose#0;n#Dashboard#0" expanded="false" />
             <element signature="n#!!block;n#handleClickOpen#0;n#Dashboard#0" expanded="false" />
@@ -755,16 +751,14 @@
             <element signature="n#!!block;n#priceChange#0;n#Dashboard#0" expanded="false" />
             <element signature="n#!!block;n#description#0;n#Dashboard#0" expanded="false" />
             <element signature="n#!!block;n#sendPost#0;n#Dashboard#0" expanded="false" />
-            <element signature="e#2792#3258#0" expanded="false" />
-            <element signature="e#3276#5120#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4875">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding />
         </state>
       </provider>

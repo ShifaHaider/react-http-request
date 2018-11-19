@@ -11,7 +11,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import firebase from 'firebase'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-
+import ViewItem from './view-item.js'
 
 class Dashboard extends Component {
     constructor(props) {
@@ -78,7 +78,8 @@ class Dashboard extends Component {
     }
 
     viewItem(c){
-        this.props.history.push('/view-item')
+        this.props.history.push('/view-item');
+        <ViewItem c={c}/>
     }
 
     render() {
