@@ -1,0 +1,6 @@
+.border {
+    border: solid 1px rgba(1, 45, 50, 0.2);
+    height: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}

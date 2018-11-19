@@ -57,6 +57,7 @@ class Main extends Component {
             data.picture = profile.picture;
             data.id = result.user.uid;
             db.collection('Users').doc(data.id).set(data);
+            localStorage.setItem('userID' , data.id);
             this.props.history.push('/dashboard');
         }).catch((function (error) {
                 alert(error);
