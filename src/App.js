@@ -3,9 +3,11 @@ import './App.css';
 //import Express from "./express-server/express-server";
 import {Router, Route, Switch, Link} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
-import Main from './main.js';
 import firebase from 'firebase'
-import Dashboard from './dashboard.js'
+import Main from './components/main.js';
+import Dashboard from './components/dashboard.js';
+import Post from './components/post.js'
+
 
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
@@ -34,6 +36,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path={'/'} component={Main}/>
                             <Route exact path={'/dashboard'} component={Dashboard}/>
+                            <Route exact path={'/post'} component={Post}/>
                         </Switch>
                     </div>
                 </Router>

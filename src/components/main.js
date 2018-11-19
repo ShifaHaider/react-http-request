@@ -73,10 +73,12 @@ class Main extends Component {
                         <Typography variant="h6" color="inherit">
                          MY - OLX
                         </Typography>
+                        <div style={{position: 'absolute', right: '10px'}}>
                         <Button color="inherit" onClick={this.handleClickOpen}>Login</Button>
+                        </div>
                     </Toolbar>
                 </AppBar>
-                <Dialog style={{width: '500px'}}
+                <Dialog
                     open={this.state.open}
                     onClose={this.handleClose}
                     aria-labelledby="form-dialog-title">
