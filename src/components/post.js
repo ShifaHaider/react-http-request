@@ -17,8 +17,7 @@ class Post extends Component {
                         </Typography>
                         </Toolbar>
                     </AppBar>
-                
-
+                <h2 style={{textAlign : 'center'}}>POST YOUR AD</h2>
             </div>
         )
     }
