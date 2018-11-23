@@ -112,9 +112,10 @@ class Dashboard extends Component {
     }
     cardClose(){
         this.setState({cardOpen: false});
-
     }
-
+    sendProfile(){
+        this.props.history.push('/my-profile');
+    }
     render() {
         return (
             <div>
@@ -176,7 +177,7 @@ class Dashboard extends Component {
                 <Card style={{padding: 0, position: 'absolute', boxShadow: '0 1px 4px 0 rgba(0,0,0,.1)', width: '200px', right: '5%',top: '53px'}}>
                     <List>
                         <ListItem button onClick={this.cardClose.bind(this)}>My Ads</ListItem>
-                        <ListItem button onClick={this.cardClose.bind(this)}>My Profile</ListItem>
+                        <ListItem button onClick={this.sendProfile.bind(this)}>My Profile</ListItem>
                         <ListItem button onClick={this.cardClose.bind(this)}>My Orders</ListItem>
                         <ListItem button onClick={this.cardClose.bind(this)}>My Network</ListItem>
                         <ListItem button onClick={this.cardClose.bind(this)}>Setting</ListItem>

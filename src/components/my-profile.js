@@ -1,3 +1,16 @@
-/**
- * Created by DELL on 11/23/2018.
- */
+import React, { Component } from 'react';
+
+
+
+class MyProfile extends Component {
+
+
+    render(){
+        return(
+            <div>
+            <h1>Hello</h1>
+            </div>
+        )
+    }
+}
+export default MyProfile;
