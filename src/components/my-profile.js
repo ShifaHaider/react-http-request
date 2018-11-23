@@ -39,7 +39,7 @@ class MyProfile extends Component {
                     <div style={{padding: '30px' , color: '#002f34'}}>{this.state.userData.name}</div>
                     <div style={{padding: '20px' , color: '#002f34'}}>0 Following           0 Followers</div>
                     <div style={{padding: '10px' , color: '#002f34'}}>VERIFIED ACCOUNTS</div>
-
+                    <Button variant="outlined" color="primary" >EDIT PROFILE</Button>
                 </div>
 
             </div>
