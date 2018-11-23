@@ -8,6 +8,7 @@ import Main from './components/main.js';
 import Dashboard from './components/dashboard.js';
 import Post from './components/post.js'
 import ViewItem from './components/view-item.js'
+import Drawer2 from './components/drawer.js';
 
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
@@ -37,7 +38,8 @@ class App extends Component {
                             <Route exact path={'/'} component={Main}/>
                             <Route exact path={'/dashboard'} component={Dashboard}/>
                             <Route exact path={'/post'} component={Post}/>
-                            <Route exact path={'/view-item'} component={ViewItem}/>
+                            <Route exact path={'/view-item/:category'} component={ViewItem}/>
+                            <Route exact path={'/drawer'} component={Drawer2}/>
                         </Switch>
                     </div>
                 </Router>

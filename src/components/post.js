@@ -7,6 +7,14 @@ import './style.css'
 class Post extends Component {
 
 
+    constructor(props){
+        super(props);
+        console.log(this.props);
+       this.item =  JSON.parse(localStorage.getItem('item'));
+    }
+
+
+
     render(){
         return(
             <div>
@@ -17,10 +25,13 @@ class Post extends Component {
                         </Typography>
                         </Toolbar>
                     </AppBar>
-                <h2 style={{textAlign : 'center'}}>POST YOUR AD</h2>
+                <img src={this.item.image} height='400px' width='700px'></img>
+                <div style={{border : 'solid 1px gray' , height: '135px', width: '700px'}}>
+                    <h4>Description</h4><br/>
+                    {this.item.description}
+                </div>
             </div>
         )
     }
-
 }
 export default Post;
