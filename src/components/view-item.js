@@ -51,7 +51,7 @@ class ViewItem extends Component {
 
         return (
             <div>
-                <AppBar position="fixed">
+                <AppBar position="static">
                     <Toolbar>
                         <Typography variant="h6" color="inherit">
                             Items
@@ -82,7 +82,6 @@ class ViewItem extends Component {
                             )
                         })}
                     </div> : <h1>No Item!</h1>}
-                {this.state.compOpen ? <Post/> : null}
             </div>
         )
     }
