@@ -15,6 +15,8 @@ import ViewItem from './view-item.js'
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -30,7 +32,8 @@ class Dashboard extends Component {
             title: '',
             price: 0,
             description: '',
-            image: ''
+            image: '',
+            cardOpen: false
         };
       this.profile = localStorage.getItem('userProfile');
     }
@@ -104,6 +107,14 @@ class Dashboard extends Component {
         });
     }
 
+    cardOpen(){
+        this.setState({cardOpen: true});
+    }
+    cardClose(){
+        this.setState({cardOpen: false});
+
+    }
+
     render() {
         return (
             <div>
@@ -116,7 +127,7 @@ class Dashboard extends Component {
                             <Button color="inherit" onClick={this.handleClickOpen.bind(this)}>Sell</Button>
                         </div>
                         <div style={{ position: 'absolute', right: '55px', top: '11px' , width: '60px', height: '60px', cursor: 'pointer'}}>
-                            <Avatar alt="Adelle Charles" src={this.profile}/>
+                            <Avatar alt="Adelle Charles" src={this.profile} onClick={this.cardOpen.bind(this)}/>
                         </div>
                     </Toolbar>
                 </AppBar>
@@ -161,6 +172,19 @@ class Dashboard extends Component {
                         )
                     })}
                 </div>
+                {this.state.cardOpen ?
+                <Card style={{padding: 0, position: 'absolute', boxShadow: '0 1px 4px 0 rgba(0,0,0,.1)', width: '200px', right: '5%',top: '53px'}}>
+                    <List>
+                        <ListItem button onClick={this.cardClose.bind(this)}>My Ads</ListItem>
+                        <ListItem button onClick={this.cardClose.bind(this)}>My Profile</ListItem>
+                        <ListItem button onClick={this.cardClose.bind(this)}>My Orders</ListItem>
+                        <ListItem button onClick={this.cardClose.bind(this)}>My Network</ListItem>
+                        <ListItem button onClick={this.cardClose.bind(this)}>Setting</ListItem>
+                        <ListItem button onClick={this.cardClose.bind(this)}>Help</ListItem>
+                        <ListItem button onClick={this.cardClose.bind(this)}>Logout</ListItem>
+                    </List>
+                </Card> : null}
+
             </div>
         )
     }

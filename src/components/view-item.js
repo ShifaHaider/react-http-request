@@ -82,13 +82,29 @@ class ViewItem extends Component {
                             )
                         })}
                     </div> : <h1>No Item!</h1>}
+
+
             </div>
         )
     }
 }
 
 export default ViewItem;
-
+///* margin: 0; */
+//padding: 0;
+///* z-index: 2; */
+//position: absolute;
+//box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+//background-color: #fff;
+//width: 200px;
+//right: 5%;
+//top: 53px!important;
+///* left: auto; */
+//width: -webkit-max-content;
+//width: -moz-max-content;
+//width: max-content;
+/* min-width: 200px; */
+/* text-align: left; */
 
 
 
