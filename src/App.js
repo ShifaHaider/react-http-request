@@ -5,11 +5,12 @@ import {Router, Route, Switch, Link} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 import firebase from 'firebase'
 import Main from './components/main.js';
-import Dashboard from './components/dashboard.js';
+import ToolBar from './components/toolbar.js';
 import Post from './components/post.js'
 import ViewItem from './components/view-item.js'
 import Drawer2 from './components/drawer.js';
 import MyProfile from './components/my-profile.js';
+import Category from './components/category.js'
 
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
@@ -37,10 +38,11 @@ class App extends Component {
                     <div>
                         <Switch>
                             <Route exact path={'/'} component={Main}/>
-                            <Route exact path={'/dashboard'} component={Dashboard}/>
+                            <Route exact path={'/toolbar'} component={ToolBar}/>
                             <Route exact path={'/post'} component={Post}/>
                             <Route exact path={'/view-item/:category'} component={ViewItem}/>
                             <Route exact path={'/drawer'} component={Drawer2}/>
+                            <Route exact path={'/category'} component={Category}/>
                             <Route exact path={'/my-profile'} component={MyProfile}/>
                         </Switch>
                     </div>
