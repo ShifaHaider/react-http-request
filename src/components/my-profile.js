@@ -14,10 +14,13 @@ class MyProfile extends Component {
 
 
     loadUserData(){
+        var userID = localStorage.getItem('userID');
         var db = firebase.firestore();
         var settings = {timestampsInSnapshots: true};
         db.settings(settings);
-        db.collection('Users').doc();
+        db.collection('Users').doc(userID).get().then((data)=>{
+            
+        });
     }
 
     render(){
