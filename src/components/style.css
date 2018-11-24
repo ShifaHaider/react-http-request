@@ -4,3 +4,22 @@
     margin-left: 50px;
     margin-right: 50px;
 }
+#icon{
+    background-color: rgba(0,47,52,.36);
+    position: relative;
+    color: rgba(0,47,52,.64);
+    cursor: pointer;
+    height: 40px;
+    flex: 0 0 40px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /*display: flex;*/
+    border: 1px solid rgba(0,47,52,.36);
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 40px;
+}
+#input{
+    padding-top: 10px;
+}

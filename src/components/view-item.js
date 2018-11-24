@@ -13,6 +13,14 @@ import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import TextField from '@material-ui/core/TextField';
+import ToolBar from './toolbar.js'
+import Button from '@material-ui/core/Button';
+import './style.css'
+
 
 class ViewItem extends Component {
 
@@ -21,7 +29,9 @@ class ViewItem extends Component {
         this.state = {
             items: [],
             compOpen: false,
-            item: {}
+            item: {},
+            error: false
+
         };
         this.loadCategory();
     }
@@ -47,24 +57,66 @@ class ViewItem extends Component {
         localStorage.setItem('item', JSON.stringify(v));
     }
 
+    minValue(e){
+        console.log(e.target.value);
+        this.setState({minValue: e.target.value});
+    }
+
+    maxValue(e){
+        console.log(e.target.value);
+        this.setState({maxValue: e.target.value});
+    }
+
+    loadSelectedData(){
+        var selectedItems = [];
+        var db = firebase.firestore();
+        var settings = {timestampsInSnapshots: true};
+        db.settings(settings);
+        var min = this.state.minValue;
+        var max = this.state.maxValue;
+        this.state.items.map((item)=>{
+            console.log(min  , item.price , max);
+            console.log(min <= item.price , max >= item.price );
+            if(Number(min) <= Number(item.price) && Number(max) >= Number(item.price) ){
+               selectedItems.push(item);
+                this.setState({items: selectedItems, error: false});
+               console.log(selectedItems);
+           }
+            else{
+               this.setState({items: selectedItems , error: 'Oops... we did not find anything that matches this search'})
+           }
+        })
+    }
+
+
     render() {
 
         return (
             <div>
-                <AppBar position="static">
-                    <Toolbar>
-                        <Typography variant="h6" color="inherit">
-                            Items
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-
+                <ToolBar/>
+                <GridList cols={4} cellHeight='auto'>
+                    <GridListTile cols={1}>
+                       <div style={{ border: 'solid 1px rgba(0,47,52,.2)', height: '150px', width: '100%'}}>
+                           <div style={{marginTop: '90px'}}>
+                           <TextField label="Min" type='number' style={{width: '100px' , backgroundColor: '#ebeeef' , margin: '0 8px 0 0'}}
+                               value={this.state.minValue} onChange={this.minValue.bind(this)}/>
+                           <TextField label="Max" type='number' style={{width: '100px' , backgroundColor: '#ebeeef', margin: '0 8px 0 0'}}
+                                      value={this.state.maxValue} onChange={this.maxValue.bind(this)}/>
+                           <div style={{display: 'inline'}} onClick={this.loadSelectedData.bind(this)}>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id='icon'>
+                                   <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                   <path fill="none" d="M0 0h24v24H0V0z"/></svg>
+                           </div>
+                           </div>
+                       </div>
+                    </GridListTile>
+                    <GridListTile cols={3}>
                 {this.state.items.length !== 0 ?
                     <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
                         {this.state.items.map((item) => {
                             return (
                                 <Card
-                                    style={{ width:"20%", cursor: 'pointer', border:"solid 1px #bebebe", borderRadius:"0px", margin:"2px", boxShadow:"none"}}
+                                    style={{ width:"30%", cursor: 'pointer', border:"solid 1px #bebebe", borderRadius:"0px", margin:"2px", boxShadow:"none"}}
                                     onClick={this.detail.bind(this , item)}>
                                     <CardActionArea>
                                         <CardMedia component="img" alt="Contemplative Reptile"
@@ -82,7 +134,9 @@ class ViewItem extends Component {
                             )
                         })}
                     </div> : <h1>No Item!</h1>}
-
+                        {this.state.error ? null: <h1>{this.state.error}</h1>}
+                </GridListTile>
+                </GridList>
 
             </div>
         )
@@ -107,11 +161,5 @@ export default ViewItem;
 /* text-align: left; */
 
 
-
-
-
-
-
-//<Card style={{ width:"20%", height:"130px" , cursor: 'pointer', border:"solid 1px #bebebe", borderRadius:"0px", margin:"2px", boxShadow:"none",  }}>
-
-
+//width: 70px;
+//background: #ebeeef;

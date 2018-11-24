@@ -28,6 +28,7 @@ class Category extends Component {
         return(
             <div>
                 <Toolbar/>
+
                 <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
                     {this.state.category.map((category) => {
                         return (

@@ -10,7 +10,8 @@ import Post from './components/post.js'
 import ViewItem from './components/view-item.js'
 import Drawer2 from './components/drawer.js';
 import MyProfile from './components/my-profile.js';
-import Category from './components/category.js'
+import Category from './components/category.js';
+import EditProfile from './components/edit-profile.js'
 
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
@@ -44,6 +45,7 @@ class App extends Component {
                             <Route exact path={'/drawer'} component={Drawer2}/>
                             <Route exact path={'/category'} component={Category}/>
                             <Route exact path={'/my-profile'} component={MyProfile}/>
+                            <Route exact path={'/edit-profile'} component={EditProfile}/>
                         </Switch>
                     </div>
                 </Router>

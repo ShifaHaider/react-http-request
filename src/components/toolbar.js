@@ -33,7 +33,8 @@ class ToolBar extends Component {
             price: 0,
             description: '',
             image: '',
-            cardOpen: false
+            cardOpen: false,
+            anchorEl: null
         };
       this.profile = localStorage.getItem('userProfile');
     }
@@ -108,10 +109,19 @@ class ToolBar extends Component {
     cardClose(){
         this.setState({cardOpen: false});
     }
-    sendProfile(){
-        this.props.history.push('/view-item');
+    myProfile(){
+        this.props.history.push('/my-profile');
     }
+
+    handleClick = event => {
+        this.setState({ anchorEl: event.currentTarget });
+    };
+    handleClose = () => {
+        this.setState({ anchorEl: null });
+    };
     render() {
+        const { anchorEl } = this.state;
+
         return (
             <div>
                 <AppBar position="static">
@@ -122,9 +132,24 @@ class ToolBar extends Component {
                         <div style={{ position: 'absolute', right: '10px' }}>
                             <Button color="inherit" onClick={this.handleClickOpen.bind(this)}>Sell</Button>
                         </div>
+
                         <div style={{ position: 'absolute', right: '55px', top: '11px' , width: '60px', height: '60px', cursor: 'pointer'}}>
-                            <Avatar alt="Adelle Charles" src={this.profile} onClick={this.cardOpen.bind(this)}/>
+                            <Avatar alt="Adelle Charles" src={this.profile} onClick={this.handleClick}/>
                         </div>
+                        <Menu
+                            id="simple-menu"
+                            anchorEl={anchorEl}
+                            open={Boolean(anchorEl)}
+                            onClose={this.handleClose}
+                            >
+                            <MenuItem onClick={this.handleClose}>My Ads</MenuItem>
+                            <MenuItem onClick={this.myProfile.bind(this)}>My Profile</MenuItem>
+                            <MenuItem onClick={this.handleClose}>My orders</MenuItem>
+                            <MenuItem onClick={this.handleClose}>My network</MenuItem>
+                            <MenuItem onClick={this.handleClose}>Setting</MenuItem>
+                            <MenuItem onClick={this.handleClose}>Help</MenuItem>
+                            <MenuItem onClick={this.handleClose}>logout</MenuItem>
+                        </Menu>
                     </Toolbar>
                 </AppBar>
 
@@ -155,18 +180,6 @@ class ToolBar extends Component {
                         <Button onClick={this.sendPost.bind(this)} variant="contained" color="primary">Post</Button>
                     </DialogActions>
                 </Dialog>
-                {this.state.cardOpen ?
-                <Card style={{padding: 0, position: 'absolute', boxShadow: '0 1px 4px 0 rgba(0,0,0,.1)', width: '200px', right: '5%',top: '53px'}}>
-                    <List>
-                        <ListItem button onClick={this.cardClose.bind(this)}>My Ads</ListItem>
-                        <ListItem button onClick={this.sendProfile.bind(this)}>My Profile</ListItem>
-                        <ListItem button onClick={this.cardClose.bind(this)}>My Orders</ListItem>
-                        <ListItem button onClick={this.cardClose.bind(this)}>My Network</ListItem>
-                        <ListItem button onClick={this.cardClose.bind(this)}>Setting</ListItem>
-                        <ListItem button onClick={this.cardClose.bind(this)}>Help</ListItem>
-                        <ListItem button onClick={this.cardClose.bind(this)}>Logout</ListItem>
-                    </List>
-                </Card> : null}
 
             </div>
         )
