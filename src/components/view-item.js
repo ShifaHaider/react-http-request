@@ -55,7 +55,6 @@ class ViewItem extends Component {
     }
 
     maxValue(e){
-        console.log(e.target.value);
         this.setState({maxValue: e.target.value});
     }
 
