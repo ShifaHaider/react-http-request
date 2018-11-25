@@ -121,8 +121,8 @@
       <file leaf-file-name="navbar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/navbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.265625">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3453125">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#handleClose#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#handleClickOpen#0;n#ToolBar#0" expanded="false" />
@@ -132,9 +132,9 @@
                 <element signature="n#!!block;n#description#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#sendPost#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#uploadFile#0;n#ToolBar#0" expanded="false" />
-                <element signature="e#3619#3684#0" expanded="false" />
-                <element signature="e#3711#3761#0" expanded="false" />
-                <element signature="e#3872#5371#0" expanded="false" />
+                <element signature="e#3576#3641#0" expanded="false" />
+                <element signature="e#3668#3718#0" expanded="false" />
+                <element signature="e#3829#5328#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -816,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.265625">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3453125">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#handleClose#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#handleClickOpen#0;n#ToolBar#0" expanded="false" />
@@ -827,9 +827,9 @@
             <element signature="n#!!block;n#description#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#sendPost#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#uploadFile#0;n#ToolBar#0" expanded="false" />
-            <element signature="e#3619#3684#0" expanded="false" />
-            <element signature="e#3711#3761#0" expanded="false" />
-            <element signature="e#3872#5371#0" expanded="false" />
+            <element signature="e#3576#3641#0" expanded="false" />
+            <element signature="e#3668#3718#0" expanded="false" />
+            <element signature="e#3829#5328#0" expanded="false" />
           </folding>
         </state>
       </provider>

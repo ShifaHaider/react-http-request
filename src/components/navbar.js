@@ -11,7 +11,6 @@ import firebase from 'firebase'
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
 class ToolBar extends Component {
