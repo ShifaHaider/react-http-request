@@ -146,4 +146,3 @@ export default ViewItem;
 //background-color: #fff;
 //width: 200px;
 //right: 5%;
-//top: 53px!important;
