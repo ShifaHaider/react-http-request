@@ -66,7 +66,6 @@ class ViewItem extends Component {
         var min = this.state.minValue;
         var max = this.state.maxValue;
         this.state.items.map((item)=>{
-            console.log(min <= item.price , max >= item.price );
             if(Number(min) <= Number(item.price) && Number(max) >= Number(item.price) ){
                selectedItems.push(item);
                 this.setState({items: selectedItems, error: false});
