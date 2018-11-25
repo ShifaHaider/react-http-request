@@ -150,5 +150,3 @@ export default ViewItem;
 ///* left: auto; */
 //width: -webkit-max-content;
 //width: -moz-max-content;
-//width: max-content;
-/* min-width: 200px; */
