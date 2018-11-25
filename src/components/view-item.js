@@ -152,4 +152,3 @@ export default ViewItem;
 //width: -moz-max-content;
 //width: max-content;
 /* min-width: 200px; */
-/* text-align: left; */
