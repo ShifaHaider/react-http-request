@@ -7,7 +7,6 @@ class Post extends Component {
 
     constructor(props) {
         super(props);
-        console.log(this.props);
         this.item = JSON.parse(localStorage.getItem('item'));
     }
 
