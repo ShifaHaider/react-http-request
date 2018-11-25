@@ -22,7 +22,6 @@ class MyProfile extends Component {
         var db = firebase.firestore();
         var settings = {timestampsInSnapshots: true};
         db.settings(settings);
-        console.log(userID);
         db.collection('Users').doc(userID).get().then((doc)=> {
             this.setState({userData: doc.data()});
         });
