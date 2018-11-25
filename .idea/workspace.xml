@@ -71,8 +71,8 @@
       <file leaf-file-name="post.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10625">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0265625">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,9 +115,8 @@
         <entry file="file://$PROJECT_DIR$/src/components/navbar.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding>
-                <element signature="e#1093#1401#0" expanded="false" />
                 <element signature="n#!!block;n#handleClose#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#handleClickOpen#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#titleChange#0;n#ToolBar#0" expanded="false" />
@@ -167,13 +166,13 @@
         <option value="$PROJECT_DIR$/src/components/dashboard.js" />
         <option value="$PROJECT_DIR$/src/components/style.css" />
         <option value="$PROJECT_DIR$/src/components/toolbar.js" />
-        <option value="$PROJECT_DIR$/src/components/navbar.js" />
         <option value="$PROJECT_DIR$/src/components/my-profile.js" />
         <option value="$PROJECT_DIR$/src/components/category.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/edit-profile.js" />
         <option value="$PROJECT_DIR$/src/components/view-item.js" />
         <option value="$PROJECT_DIR$/src/components/main.js" />
+        <option value="$PROJECT_DIR$/src/components/navbar.js" />
         <option value="$PROJECT_DIR$/src/components/post.js" />
       </list>
     </option>
@@ -781,12 +780,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="e#652#694#0" expanded="false" />
+            <element signature="e#2251#2307#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding>
-            <element signature="e#1093#1401#0" expanded="false" />
             <element signature="n#!!block;n#handleClose#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#handleClickOpen#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#titleChange#0;n#ToolBar#0" expanded="false" />
@@ -802,21 +811,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="e#652#694#0" expanded="false" />
-            <element signature="e#2251#2307#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10625">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0265625">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
