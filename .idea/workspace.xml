@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/main.js" afterPath="$PROJECT_DIR$/src/components/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/post.js" afterPath="$PROJECT_DIR$/src/components/post.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19476268">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -61,28 +61,18 @@
         <entry file="file://$PROJECT_DIR$/src/components/my-profile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="post.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-              <folding>
-                <marker date="1543051718222" expanded="true" signature="441:1577" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="463:717" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="510:691" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="544:660" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="734:1558" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="801:1233" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="832:958" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="983:1206" placeholder="&lt;xml/&gt;" />
-                <marker date="1543051718222" expanded="true" signature="1254:1535" placeholder="&lt;xml/&gt;" />
-              </folding>
+            <state vertical-scroll-proportion="0.10625">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/dashboard.js" />
         <option value="$PROJECT_DIR$/src/components/drawer.js" />
         <option value="$PROJECT_DIR$/src/components/dashboard.js" />
-        <option value="$PROJECT_DIR$/src/components/post.js" />
         <option value="$PROJECT_DIR$/src/components/style.css" />
         <option value="$PROJECT_DIR$/src/components/toolbar.js" />
         <option value="$PROJECT_DIR$/src/components/navbar.js" />
@@ -184,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/components/edit-profile.js" />
         <option value="$PROJECT_DIR$/src/components/view-item.js" />
         <option value="$PROJECT_DIR$/src/components/main.js" />
+        <option value="$PROJECT_DIR$/src/components/post.js" />
       </list>
     </option>
   </component>
@@ -747,32 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <marker date="1543051718222" expanded="true" signature="441:1577" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="463:717" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="510:691" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="544:660" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="734:1558" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="801:1233" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="832:958" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="983:1206" placeholder="&lt;xml/&gt;" />
-            <marker date="1543051718222" expanded="true" signature="1254:1535" placeholder="&lt;xml/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -805,14 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/my-profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/edit-profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -834,8 +790,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19476268">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/my-profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10625">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding />
         </state>
       </provider>
