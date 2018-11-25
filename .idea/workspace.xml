@@ -90,7 +90,7 @@
       <file leaf-file-name="view-item.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3890625">
+            <state vertical-scroll-proportion="0.415625">
               <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#detail#0;n#ViewItem#0" expanded="false" />
@@ -831,7 +831,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3890625">
+        <state vertical-scroll-proportion="0.415625">
           <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#detail#0;n#ViewItem#0" expanded="false" />
