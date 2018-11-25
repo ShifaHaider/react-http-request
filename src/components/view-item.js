@@ -156,4 +156,3 @@ export default ViewItem;
 
 
 //width: 70px;
-//background: #ebeeef;
