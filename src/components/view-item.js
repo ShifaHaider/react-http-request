@@ -153,6 +153,3 @@ export default ViewItem;
 //width: max-content;
 /* min-width: 200px; */
 /* text-align: left; */
-
-
-//width: 70px;

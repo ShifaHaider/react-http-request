@@ -91,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.840625">
-              <caret line="157" column="14" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
+              <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
               <folding>
                 <element signature="n#!!block;n#detail#0;n#ViewItem#0" expanded="false" />
                 <element signature="n#!!block;n#maxValue#0;n#ViewItem#0" expanded="false" />
@@ -832,7 +832,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.840625">
-          <caret line="157" column="14" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
+          <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
           <folding>
             <element signature="n#!!block;n#detail#0;n#ViewItem#0" expanded="false" />
             <element signature="n#!!block;n#maxValue#0;n#ViewItem#0" expanded="false" />
