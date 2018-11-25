@@ -8,7 +8,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import TextField from '@material-ui/core/TextField';
 import DialogActions from '@material-ui/core/DialogActions';
 import firebase from 'firebase'
-import CardContent from '@material-ui/core/CardContent';
 import ViewItem from './view-item.js'
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';

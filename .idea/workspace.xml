@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/navbar.js" afterPath="$PROJECT_DIR$/src/components/navbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -122,8 +121,8 @@
       <file leaf-file-name="navbar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/navbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.903125">
-              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.2390625">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding>
                 <element signature="n#!!block;n#handleClose#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#handleClickOpen#0;n#ToolBar#0" expanded="false" />
@@ -133,9 +132,9 @@
                 <element signature="n#!!block;n#description#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#sendPost#0;n#ToolBar#0" expanded="false" />
                 <element signature="n#!!block;n#uploadFile#0;n#ToolBar#0" expanded="false" />
-                <element signature="e#3714#3779#0" expanded="false" />
-                <element signature="e#3806#3856#0" expanded="false" />
-                <element signature="e#3967#5466#0" expanded="false" />
+                <element signature="e#3657#3722#0" expanded="false" />
+                <element signature="e#3749#3799#0" expanded="false" />
+                <element signature="e#3910#5409#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -817,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.903125">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.2390625">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
             <element signature="n#!!block;n#handleClose#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#handleClickOpen#0;n#ToolBar#0" expanded="false" />
@@ -828,9 +827,9 @@
             <element signature="n#!!block;n#description#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#sendPost#0;n#ToolBar#0" expanded="false" />
             <element signature="n#!!block;n#uploadFile#0;n#ToolBar#0" expanded="false" />
-            <element signature="e#3714#3779#0" expanded="false" />
-            <element signature="e#3806#3856#0" expanded="false" />
-            <element signature="e#3967#5466#0" expanded="false" />
+            <element signature="e#3657#3722#0" expanded="false" />
+            <element signature="e#3749#3799#0" expanded="false" />
+            <element signature="e#3910#5409#0" expanded="false" />
           </folding>
         </state>
       </provider>
