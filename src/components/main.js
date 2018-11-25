@@ -48,7 +48,6 @@ class Main extends Component {
         var provider = new firebase.auth.GoogleAuthProvider();
         provider.addScope('https://www.googleapis.com/auth/plus.login');
         firebase.auth().signInWithPopup(provider).then((result) => {
-            console.log(result);
             var profile = result.additionalUserInfo.profile;
             console.log(profile);
             var data = {};

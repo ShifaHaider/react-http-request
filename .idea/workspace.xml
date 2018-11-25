@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/view-item.js" afterPath="$PROJECT_DIR$/src/components/view-item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/main.js" afterPath="$PROJECT_DIR$/src/components/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.21603929">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view-item.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view-item.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.840625">
+            <state vertical-scroll-proportion="0.0">
               <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
               <folding>
                 <element signature="n#!!block;n#detail#0;n#ViewItem#0" expanded="false" />
@@ -182,9 +181,9 @@
         <option value="$PROJECT_DIR$/src/components/my-profile.js" />
         <option value="$PROJECT_DIR$/src/components/category.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/main.js" />
         <option value="$PROJECT_DIR$/src/components/edit-profile.js" />
         <option value="$PROJECT_DIR$/src/components/view-item.js" />
+        <option value="$PROJECT_DIR$/src/components/main.js" />
       </list>
     </option>
   </component>
@@ -806,14 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/my-profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -832,12 +823,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/view-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.840625">
+        <state vertical-scroll-proportion="0.0">
           <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
           <folding>
             <element signature="n#!!block;n#detail#0;n#ViewItem#0" expanded="false" />
             <element signature="n#!!block;n#maxValue#0;n#ViewItem#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21603929">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
