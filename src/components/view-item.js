@@ -51,7 +51,6 @@ class ViewItem extends Component {
     }
 
     minValue(e){
-        console.log(e.target.value);
         this.setState({minValue: e.target.value});
     }
 
