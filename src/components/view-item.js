@@ -147,4 +147,3 @@ export default ViewItem;
 //width: 200px;
 //right: 5%;
 //top: 53px!important;
-///* left: auto; */
