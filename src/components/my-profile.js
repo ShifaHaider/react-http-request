@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ToolBar from './toolbar.js';
+import ToolBar from './navbar.js';
 import firebase from 'firebase'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';

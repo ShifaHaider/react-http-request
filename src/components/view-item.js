@@ -17,7 +17,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import TextField from '@material-ui/core/TextField';
-import ToolBar from './toolbar.js'
+import ToolBar from './navbar.js'
 import Button from '@material-ui/core/Button';
 import './style.css'
 
@@ -96,7 +96,6 @@ class ViewItem extends Component {
                 <ToolBar/>
                 <GridList cols={4} cellHeight='auto'>
                     <GridListTile cols={1}>
-                       <div style={{ border: 'solid 1px rgba(0,47,52,.2)', height: '150px', width: '100%'}}>
                            <div style={{marginTop: '90px'}}>
                            <TextField label="Min" type='number' style={{width: '100px' , backgroundColor: '#ebeeef' , margin: '0 8px 0 0'}}
                                value={this.state.minValue} onChange={this.minValue.bind(this)}/>
@@ -108,7 +107,6 @@ class ViewItem extends Component {
                                    <path fill="none" d="M0 0h24v24H0V0z"/></svg>
                            </div>
                            </div>
-                       </div>
                     </GridListTile>
                     <GridListTile cols={3}>
                 {this.state.items.length !== 0 ?

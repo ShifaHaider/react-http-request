@@ -59,7 +59,7 @@ class Main extends Component {
             localStorage.setItem('userProfile' ,  profile.picture);
             db.collection('Users').doc(data.id).set(data);
             localStorage.setItem('userID' , data.id);
-            this.props.history.push('/toolbar');
+            this.props.history.push('/category');
         }).catch((function (error) {
                 alert(error);
             })
