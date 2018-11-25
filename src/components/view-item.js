@@ -69,7 +69,6 @@ class ViewItem extends Component {
             if(Number(min) <= Number(item.price) && Number(max) >= Number(item.price) ){
                selectedItems.push(item);
                 this.setState({items: selectedItems, error: false});
-               console.log(selectedItems);
            }
             else{
                this.setState({items: selectedItems , error: 'Oops... we did not find anything that matches this search'})
