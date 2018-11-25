@@ -142,7 +142,6 @@ class ViewItem extends Component {
 }
 
 export default ViewItem;
-///* margin: 0; */
 //padding: 0;
 ///* z-index: 2; */
 //position: absolute;
