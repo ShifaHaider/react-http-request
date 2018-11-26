@@ -113,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/auto-complete.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.840625">
-              <caret line="71" column="2" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
+              <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -849,7 +849,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/auto-complete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.840625">
-          <caret line="71" column="2" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
+          <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
           <folding />
         </state>
       </provider>
