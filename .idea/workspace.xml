@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/auto-complete.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/edit-profile.js" afterPath="$PROJECT_DIR$/src/components/edit-profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/my-profile.js" afterPath="$PROJECT_DIR$/src/components/my-profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/toolbar.js" afterPath="$PROJECT_DIR$/src/components/toolbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/view-item.js" afterPath="$PROJECT_DIR$/src/components/view-item.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auto-complete.js" afterPath="$PROJECT_DIR$/src/components/auto-complete.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -121,8 +115,8 @@
       <file leaf-file-name="auto-complete.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/auto-complete.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.009375">
-              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.840625">
+              <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -857,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/auto-complete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.009375">
-          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.840625">
+          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
           <folding />
         </state>
       </provider>
