@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ToolBar from './navbar.js';
+import ToolBar from './toolbar.js';
 import firebase from 'firebase'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -39,7 +39,7 @@ class MyProfile extends Component {
                     <div style={{textAlign: 'center'}}>
                         <div style={{padding: '30px' , color: '#002f34'}}>{this.state.userData.name}</div>
                         <div style={{padding: '20px' , color: '#002f34'}}>0 Following 0 Followers</div>
-                        <div style={{padding: '10px' , color: '#002f34'}}>VERIFIED ACCOUNTS</div>
+                        <div style={{padding: '10px' , color: '#002f34'}}>VERIFIED ACCOUNTS</div><br/><br/><br/>
                         <Button variant="outlined" color="primary" onClick={this.editProfile.bind(this)}>EDIT PROFILE</Button>
                     </div>
                 </div>

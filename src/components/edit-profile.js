@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ToolBar from './navbar.js'
+import ToolBar from './toolbar.js'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import firebase from 'firebase'
@@ -68,6 +68,7 @@ class EditProfile extends Component {
                     <Button onClick={this.editProfile.bind(this)} variant="contained" color="primary">Edit
                         Profile</Button>
                 </div>
+
             </div>
         )
     }

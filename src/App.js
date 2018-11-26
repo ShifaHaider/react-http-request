@@ -6,12 +6,13 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import firebase from 'firebase'
 import Main from './components/main.js';
 import Post from './components/post.js'
-import ToolBar from './components/navbar.js'
+import ToolBar from './components/toolbar.js'
 import ViewItem from './components/view-item.js'
 import Drawer2 from './components/drawer.js';
 import MyProfile from './components/my-profile.js';
 import Category from './components/category.js';
-import EditProfile from './components/edit-profile.js'
+import EditProfile from './components/edit-profile.js';
+import LocationSearchInput from './components/auto-complete.js';
 
 //import First from "./routes/first-route"
 //import Second from './routes/second-route'
@@ -42,10 +43,11 @@ class App extends Component {
                             <Route exact path={'/post'} component={Post}/>
                             <Route exact path={'/view-item/:category'} component={ViewItem}/>
                             <Route exact path={'/drawer'} component={Drawer2}/>
-                            <Route exact path={'/navbar'} component={ToolBar}/>
+                            <Route exact path={'/toolbar'} component={ToolBar}/>
                             <Route exact path={'/category'} component={Category}/>
                             <Route exact path={'/my-profile'} component={MyProfile}/>
                             <Route exact path={'/edit-profile'} component={EditProfile}/>
+                            <Route exact path={'/auto-complete'} component={LocationSearchInput}/>
                         </Switch>
                     </div>
                 </Router>
