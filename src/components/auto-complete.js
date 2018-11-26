@@ -69,4 +69,4 @@ class LocationSearchInput extends Component {
     }
 }
 export default LocationSearchInput;
-//<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78&libraries=places&callback=initMap"
+//<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78&libraries=places&callback=initMa
