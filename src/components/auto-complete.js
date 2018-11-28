@@ -3,8 +3,6 @@ import Autocomplete from 'react-google-autocomplete';
 import GoogleMapReact from 'google-map-react';
 
 
-
-
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class LocationSearchInput extends Component {
@@ -16,7 +14,8 @@ class LocationSearchInput extends Component {
                 lat: 59.95,
                 lng: 30.33
             },
-            zoom: 11
+            zoom: 11,
+            place: ''
         }
     }
     static defaultProps = {
@@ -27,6 +26,21 @@ class LocationSearchInput extends Component {
         zoom: 11
     };
 
+    location(e){
+        var address = e.target.value;
+        //var geocoder = new google.maps.Geocoder();
+        //console.log(geocoder);
+        //geocoder.geocode( { 'address': address}, function(results, status) {
+        //    if (status == this.google.maps.GeocoderStatus.OK) {
+        //        console.log(results);
+        //        console.log(results[0].geometry.location.latitude);
+        //        console.log(results[0].geometry.location.longitude);
+        //        // results[0].geometry.location.latitude
+        //        // results[0].geometry.location.longitude
+        //    }
+        //});
+        console.log(e.target.value);
+    }
     render() {
         return (
             <div>
@@ -34,14 +48,14 @@ class LocationSearchInput extends Component {
                 style={{width: '90%'}}
                 onPlaceSelected={place => this.setState({ place })}
                 types={['(regions)']}
-                componentRestrictions={{country: "ru"}}/>
+                componentRestrictions={{country: "ru"}}
+                onChange={this.location.bind(this)}/>
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78' }}
                     defaultCenter={this.state.center}
                     defaultZoom={this.state.zoom}
                     >
-                    <AnyReactComponent lat={59.955413} lng={30.337844} text={'Kreyser Avrora'}/>
                 </GoogleMapReact>
             </div>
             </div>
