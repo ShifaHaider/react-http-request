@@ -28,17 +28,18 @@ class LocationSearchInput extends Component {
 
     location(e){
         var address = e.target.value;
-        //var geocoder = new google.maps.Geocoder();
-        //console.log(geocoder);
-        //geocoder.geocode( { 'address': address}, function(results, status) {
-        //    if (status == this.google.maps.GeocoderStatus.OK) {
-        //        console.log(results);
-        //        console.log(results[0].geometry.location.latitude);
-        //        console.log(results[0].geometry.location.longitude);
-        //        // results[0].geometry.location.latitude
-        //        // results[0].geometry.location.longitude
-        //    }
-        //});
+        console.log(window.google);
+        var geocoder = new window.google.maps.Geocoder();
+        geocoder.geocode( { 'address': address}, function(results, status) {
+            console.log(results, status);
+            if (status == window.google.maps.GeocoderStatus.OK) {
+                console.log(results);
+                console.log(results[0].geometry.location.latitude);
+                console.log(results[0].geometry.location.longitude);
+                // results[0].geometry.location.latitude
+                // results[0].geometry.location.longitude
+            }
+        });
         console.log(e.target.value);
     }
     render() {
@@ -53,9 +54,8 @@ class LocationSearchInput extends Component {
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78' }}
-                    defaultCenter={this.state.center}
-                    defaultZoom={this.state.zoom}
-                    >
+                    defaultCenter={this.state.center} defaultZoom={this.state.zoom}>
+                    <AnyReactComponent lat={59.955413} lng={30.337844} text={'Kreyser Avrora'}/>
                 </GoogleMapReact>
             </div>
             </div>
@@ -64,3 +64,4 @@ class LocationSearchInput extends Component {
     }
 }
 export default LocationSearchInput;
+//'AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78'
