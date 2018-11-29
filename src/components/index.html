@@ -135,11 +135,8 @@
         var input = document.getElementById('pac-input');
         var types = document.getElementById('type-selector');
         var strictBounds = document.getElementById('strict-bounds-selector');
-
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
-
         var autocomplete = new google.maps.places.Autocomplete(input);
-
         // Bind the map's bounds (viewport) property to the autocomplete object,
         // so that the autocomplete requests use the current map bounds for the
         // bounds option in the request.
@@ -213,8 +210,10 @@
                     autocomplete.setOptions({strictBounds: this.checked});
                 });
     }
+
+
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78&libraries=places&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"
         async defer></script>
 </body>
 </html>

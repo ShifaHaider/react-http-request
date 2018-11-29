@@ -43,7 +43,6 @@ class MyProfile extends Component {
                         <Button variant="outlined" color="primary" onClick={this.editProfile.bind(this)}>EDIT PROFILE</Button>
                     </div>
                 </div>
-
             </div>
         )
     }

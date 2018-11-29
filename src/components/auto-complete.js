@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Autocomplete from 'react-google-autocomplete';
 import GoogleMapReact from 'google-map-react';
-
+import Geocode from "react-geocode";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -28,18 +28,20 @@ class LocationSearchInput extends Component {
 
     location(e){
         var address = e.target.value;
-        console.log(window.google);
-        var geocoder = new window.google.maps.Geocoder();
-        geocoder.geocode( { 'address': address}, function(results, status) {
-            console.log(results, status);
-            if (status == window.google.maps.GeocoderStatus.OK) {
-                console.log(results);
-                console.log(results[0].geometry.location.latitude);
-                console.log(results[0].geometry.location.longitude);
-                // results[0].geometry.location.latitude
-                // results[0].geometry.location.longitude
+        //Geocode.setApiKey("AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78");
+        Geocode.setApiKey("AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI");
+        Geocode.enableDebug();
+        Geocode.fromAddress("Eiffel Tower").then(
+                response => {
+                    console.log(response);
+                    const { lat, lng } = response.results[0].geometry.location;
+                console.log(lat, lng);
+            },
+                error => {
+                console.error(error);
             }
-        });
+        );
+
         console.log(e.target.value);
     }
     render() {

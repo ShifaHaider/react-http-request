@@ -12,6 +12,7 @@
     "history": "^4.7.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-geocode": "^0.1.2",
     "react-google-autocomplete": "^1.0.18",
     "react-places-autocomplete": "^7.2.0",
     "react-router-dom": "^4.3.1",
