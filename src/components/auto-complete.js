@@ -28,23 +28,27 @@ class LocationSearchInput extends Component {
 
     location(e){
         var address = e.target.value;
-        //Geocode.setApiKey("AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78");
-        Geocode.setApiKey("AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI");
+        //Geocode.setApiKey("AIzaSyBdHhIcbrK8mp4xudA2O0SOa7vZL-tytic");
+        Geocode.setApiKey("AIzaSyBdHhIcbrK8mp4xudA2O0SOa7vZL-tytic");
         Geocode.enableDebug();
-        Geocode.fromAddress("Eiffel Tower").then(
-                response => {
-                    console.log(response);
-                    const { lat, lng } = response.results[0].geometry.location;
-                console.log(lat, lng);
-            },
-                error => {
-                console.error(error);
-            }
-        );
-
+        Geocode.fromAddress({ address }).then((a)=>{
+            console.log(a)
+        }).catch((e)=>{
+            console.log(e)
+        });
+        //Geocode.fromAddress("Eiffel Tower").then(
+        //        response => {
+        //            console.log("---------------------------------", response);
+        //            const { lat, lng } = response.results[0].geometry.location;
+        //        console.log(lat, lng);
+        //    },
+        //        error => {
+        //        console.error("00000000000000000",error);
+        //    }
+        //);
         console.log(e.target.value);
     }
-    render() {
+    render(){
         return (
             <div>
             <Autocomplete
@@ -53,6 +57,7 @@ class LocationSearchInput extends Component {
                 types={['(regions)']}
                 componentRestrictions={{country: "ru"}}
                 onChange={this.location.bind(this)}/>
+
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78' }}
