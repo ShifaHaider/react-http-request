@@ -6,25 +6,29 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+
 
 class ViewAllItems extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             allItems: []
         };
         this.loadAllItems();
     }
 
 
-    loadAllItems(){
+    loadAllItems() {
         var allItems = [];
         var db = firebase.firestore();
         var settings = {timestampsInSnapshots: true};
         db.settings(settings);
-        db.collection('post').onSnapshot((items)=>{
-            items.docChanges().forEach((item)=>{
+        db.collection('post').onSnapshot((items)=> {
+            items.docChanges().forEach((item)=> {
                 var item = item.doc.data();
                 //item.id = item.doc.id;
                 allItems.push(item);
@@ -33,14 +37,25 @@ class ViewAllItems extends Component {
             })
         })
     }
+
     detail(v) {
         this.props.history.push('/post');
         localStorage.setItem('item', JSON.stringify(v));
     }
-    render(){
-        return(
+
+    render() {
+        return (
             <div>
-              <ToolBar/>
+                <ToolBar/>
+                <GridList cols={4} cellHeight='auto'>
+                    <GridListTile cols={1}>
+
+                    </GridListTile>
+                    <GridListTile cols={3}>
+                    
+                    </GridListTile>
+                </GridList>
+
                 <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
                     {this.state.allItems.map((item) => {
                         return (
@@ -68,7 +83,6 @@ class ViewAllItems extends Component {
     }
 
 }
-
 
 
 export default ViewAllItems;
