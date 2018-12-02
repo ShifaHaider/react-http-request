@@ -16,7 +16,7 @@ import ToolBar from './toolbar.js'
 import './style.css'
 
 
-class ViewItem extends Component {
+class ViewItems extends Component {
 
     constructor(props) {
         super(props);
@@ -128,4 +128,4 @@ class ViewItem extends Component {
     }
 }
 
-export default ViewItem;
+export default ViewItems;

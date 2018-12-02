@@ -20,7 +20,7 @@ class Category extends Component {
         };
     }
     viewItem(c) {
-        this.props.history.push('/view-item/'+ c);
+        this.props.history.push('/view-items/'+ c);
         localStorage.setItem('category', c);
     }
 
