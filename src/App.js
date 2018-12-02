@@ -14,6 +14,7 @@ import Category from './components/category.js';
 import EditProfile from './components/edit-profile.js';
 import LocationSearchInput from './components/auto-complete.js';
 import ViewAllItems from './components/view-all-items.js';
+import MinMax from './components/min-max.js'
 
 
 //import First from "./routes/first-route"
@@ -50,6 +51,7 @@ class App extends Component {
                             <Route exact path={'/my-profile'} component={MyProfile}/>
                             <Route exact path={'/edit-profile'} component={EditProfile}/>
                             <Route exact path={'/view-all-items'} component={ViewAllItems}/>
+                            <Route exact path={'/min-max'} component={MinMax}/>
                             <Route exact path={'/auto-complete'} component={LocationSearchInput}/>
                         </Switch>
                     </div>

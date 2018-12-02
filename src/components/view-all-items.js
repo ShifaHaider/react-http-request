@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
+import TextField from '@material-ui/core/TextField';
 
 
 class ViewAllItems extends Component {
@@ -43,19 +44,51 @@ class ViewAllItems extends Component {
         localStorage.setItem('item', JSON.stringify(v));
     }
 
+    minValue(e){
+        this.setState({minValue: e.target.value});
+    }
+
+    maxValue(e){
+        this.setState({maxValue: e.target.value});
+    }
+
+    loadSelectedData(){
+        var selectedItems = [];
+        var db = firebase.firestore();
+        var settings = {timestampsInSnapshots: true};
+        db.settings(settings);
+        var min = this.state.minValue;
+        var max = this.state.maxValue;
+        this.state.allItems.map((item)=>{
+            if(Number(min) <= Number(item.price) && Number(max) >= Number(item.price) ){
+                selectedItems.push(item);
+                this.setState({items: selectedItems});
+            }
+            else{
+                this.setState({items: selectedItems , error: 'Oops... we did not find anything that matches this search'})
+            }
+        })
+    }
+
     render() {
         return (
             <div>
                 <ToolBar/>
                 <GridList cols={4} cellHeight='auto'>
                     <GridListTile cols={1}>
-
+                        <div style={{marginTop: '90px'}}>
+                            <TextField label="Min" type='number' style={{width: '100px' , backgroundColor: '#ebeeef' , margin: '0 8px 0 0'}}
+                                       value={this.state.minValue} onChange={this.minValue.bind(this)}/>
+                            <TextField label="Max" type='number' style={{width: '100px' , backgroundColor: '#ebeeef', margin: '0 8px 0 0'}}
+                                       value={this.state.maxValue} onChange={this.maxValue.bind(this)}/>
+                            <div style={{display: 'inline'}} onClick={this.loadSelectedData.bind(this)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id='icon'>
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    <path fill="none" d="M0 0h24v24H0V0z"/></svg>
+                            </div>
+                        </div>
                     </GridListTile>
                     <GridListTile cols={3}>
-                    
-                    </GridListTile>
-                </GridList>
-
                 <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
                     {this.state.allItems.map((item) => {
                         return (
@@ -78,6 +111,9 @@ class ViewAllItems extends Component {
                         )
                     })}
                 </div>
+                    </GridListTile>
+                </GridList>
+
             </div>
         )
     }
