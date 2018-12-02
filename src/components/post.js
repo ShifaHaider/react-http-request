@@ -15,8 +15,8 @@ class Post extends Component {
         return (
             <div>
                <ToolBar/>
-                <div style={{ display: "flex", padding:10 }} >
-                    <div >
+                <div style={{ display: "flex", padding: 10}} >
+                    <div>
                         <div>
                             <img src={this.item.image} height='400px' width='100%'></img>
                         </div>
@@ -25,12 +25,18 @@ class Post extends Component {
                             {this.item.description}
                         </div>
                     </div>
-                    <div style={{ border: 'solid 1px rgba(0,47,52,.2)', height: '100%', width: '30%', float: "left",
+                    <div style={{width: '30%'}} >
+                    <div style={{ border: 'solid 1px rgba(0,47,52,.2)', height: '30%', float: "left",
                        padding: 6 , marginLeft: 10 }}>
                         <h1>Rs. {this.item.price}</h1>
                         {this.item.description}
                     </div>
+                        <div style={{ border: 'solid 1px rgba(0,47,52,.2)', height: '200px', width: '250px', float: "left",
+                    margin: "10px 0 0 10px"}}> <h3>Location</h3>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         )
     }

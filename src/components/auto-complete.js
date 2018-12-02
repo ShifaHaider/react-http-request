@@ -29,24 +29,20 @@ class LocationSearchInput extends Component {
     location(e){
         var address = e.target.value;
         //Geocode.setApiKey("AIzaSyBdHhIcbrK8mp4xudA2O0SOa7vZL-tytic");
-        Geocode.setApiKey("AIzaSyBdHhIcbrK8mp4xudA2O0SOa7vZL-tytic");
+        Geocode.setApiKey("AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI");
         Geocode.enableDebug();
-        Geocode.fromAddress({ address }).then((a)=>{
-            console.log(a)
-        }).catch((e)=>{
-            console.log(e)
-        });
-        //Geocode.fromAddress("Eiffel Tower").then(
-        //        response => {
-        //            console.log("---------------------------------", response);
-        //            const { lat, lng } = response.results[0].geometry.location;
-        //        console.log(lat, lng);
-        //    },
-        //        error => {
-        //        console.error("00000000000000000",error);
-        //    }
-        //);
-        console.log(e.target.value);
+        console.log(Geocode.fromAddress("karachi"));
+        Geocode.fromAddress("Eiffel Tower").then((response) => {
+                    console.log(response);
+                    const { lat, lng } = response.results[0].geometry.location;
+                console.log(lat, lng);
+            },
+                error => {
+                console.error(error);
+            }
+        ).catch((e)=>{
+                console.log(e);
+            })
     }
     render(){
         return (
@@ -60,14 +56,13 @@ class LocationSearchInput extends Component {
 
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78' }}
+                    bootstrapURLKeys={{ key: 'AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI' }}
                     defaultCenter={this.state.center} defaultZoom={this.state.zoom}>
                     <AnyReactComponent lat={59.955413} lng={30.337844} text={'Kreyser Avrora'}/>
                 </GoogleMapReact>
             </div>
             </div>
         );
-
     }
 }
 export default LocationSearchInput;

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import Toolbar from './navbar.js'
+import Toolbar from './toolbar.js'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -32,7 +32,8 @@ class Category extends Component {
                 <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
                     {this.state.category.map((category) => {
                         return (
-                            <Card style={{ width:"20%", height:"130px" , cursor: 'pointer', border:"solid 1px #bebebe", borderRadius:"0px", margin:"2px", boxShadow:"none",  }} onClick={this.viewItem.bind(this, category)}>
+                            <Card key={category} style={{ width:"20%", height:"130px" , cursor: 'pointer', border:"solid 1px #bebebe",
+                            borderRadius:"0px", margin:"2px", boxShadow:"none"}} onClick={this.viewItem.bind(this, category)}>
                                 <CardContent>
                                     <Typography gutterBottom variant="h6" component="h6">
                                         {category}

@@ -11,8 +11,8 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import TextField from '@material-ui/core/TextField';
-import ToolBar from './navbar.js'
 import Button from '@material-ui/core/Button';
+import ToolBar from './toolbar.js'
 import './style.css'
 
 
@@ -24,7 +24,7 @@ class ViewItem extends Component {
             items: [],
             compOpen: false,
             item: {},
-            error: false
+            error: 'No Item!'
 
         };
         this.loadCategory();
@@ -69,7 +69,7 @@ class ViewItem extends Component {
         this.state.items.map((item)=>{
             if(Number(min) <= Number(item.price) && Number(max) >= Number(item.price) ){
                selectedItems.push(item);
-                this.setState({items: selectedItems, error: false});
+                this.setState({items: selectedItems,});
            }
             else{
                this.setState({items: selectedItems , error: 'Oops... we did not find anything that matches this search'})
@@ -77,9 +77,7 @@ class ViewItem extends Component {
         })
     }
 
-
     render() {
-
         return (
             <div>
                 <ToolBar/>
@@ -102,11 +100,11 @@ class ViewItem extends Component {
                     <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
                         {this.state.items.map((item) => {
                             return (
-                                <Card
+                                <Card key={item.time}
                                     style={{ width:"30%", cursor: 'pointer', border:"solid 1px #bebebe", borderRadius:"0px", margin:"2px", boxShadow:"none"}}
                                     onClick={this.detail.bind(this , item)}>
                                     <CardActionArea>
-                                        <CardMedia component="img" alt="Contemplative Reptile"
+                                        <CardMedia component="img" alt="Picture not found"
                                                    height="140" image={item.image} title="Contemplative Reptile"/>
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="h2">
@@ -120,7 +118,7 @@ class ViewItem extends Component {
                                 </Card>
                             )
                         })}
-                    </div> : <h1>No Item!</h1>}
+                    </div> : <h1>{this.state.error}</h1>}
                         {this.state.error ? null: <h1>{this.state.error}</h1>}
                 </GridListTile>
                 </GridList>
