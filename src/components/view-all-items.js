@@ -187,5 +187,5 @@ class ViewAllItems extends Component {
 
 }
 
-Hellloooooooooooo
+Helllooooooooooo
 export default ViewAllItems;
