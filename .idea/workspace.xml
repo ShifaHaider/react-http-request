@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="" />
+    <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/view-all-items.js" afterPath="$PROJECT_DIR$/src/components/view-all-items.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -42,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/view-all-items.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.8140625">
-              <caret line="189" column="30" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="30" />
+              <caret line="189" column="29" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
               <folding>
                 <element signature="n#!!block;n#detail#0;n#ViewAllItems#0" expanded="false" />
                 <element signature="n#!!block;n#maxValue#0;n#ViewAllItems#0" expanded="false" />
@@ -831,7 +833,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/view-all-items.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8140625">
-          <caret line="189" column="30" selection-start-line="189" selection-start-column="30" selection-end-line="189" selection-end-column="30" />
+          <caret line="189" column="29" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
           <folding>
             <element signature="n#!!block;n#detail#0;n#ViewAllItems#0" expanded="false" />
             <element signature="n#!!block;n#maxValue#0;n#ViewAllItems#0" expanded="false" />
