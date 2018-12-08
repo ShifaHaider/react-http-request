@@ -25,7 +25,12 @@ class ViewAllItems extends Component {
         super(props);
         this.state = {
             allItems: [],
-            values: [],
+            selectedCategory: [
+                'Mobiles', 'Vehicles', 'Property for Sale', 'Property for Rent',
+                'Electronics & Home Appliances', 'Bikes', 'Business, ' +
+                'Industrial & Agriculture', 'Services', 'Jobs', 'Animals', '' +
+                'Furniture & Home Decor', 'Fashion & Beauty', 'Books, Sports & Hobbies', 'Kids'
+            ],
             category: [
                 'Mobiles', 'Vehicles', 'Property for Sale', 'Property for Rent',
                 'Electronics & Home Appliances', 'Bikes', 'Business, ' +
@@ -34,27 +39,6 @@ class ViewAllItems extends Component {
             ]
         };
         this.loadAllItems();
-
-    }
-
-    loadAllItems() {
-        var allItems = [];
-        var db = firebase.firestore();
-        var settings = {timestampsInSnapshots: true};
-        db.settings(settings);
-        db.collection('post').onSnapshot((items)=> {
-            items.docChanges().forEach((item)=> {
-                var item = item.doc.data();
-                //item.id = item.doc.id;
-                allItems.push(item);
-                this.setState({allItems: allItems});
-            })
-        })
-    }
-
-    detail(v) {
-        this.props.history.push('/post');
-        localStorage.setItem('item', JSON.stringify(v));
     }
 
     minValue(e) {
@@ -62,49 +46,38 @@ class ViewAllItems extends Component {
     }
 
     maxValue(e) {
+        console.log(e.target.value);
         this.setState({maxValue: e.target.value});
     }
 
-    loadSelectedData() {
-        var selectedItems = [];
+    loadAllItems() {
+        var allItems = [];
+        var min = this.state.minValue;
+        var max = this.state.maxValue;
+        var selectedCategory = this.state.selectedCategory;
         var db = firebase.firestore();
         var settings = {timestampsInSnapshots: true};
         db.settings(settings);
-        var min = this.state.minValue;
-        var max = this.state.maxValue;
-        this.state.allItems.map((item)=> {
-            if (Number(min) <= Number(item.price) && Number(max) >= Number(item.price)) {
-                selectedItems.push(item);
-                this.setState({allItems: selectedItems});
-            }
-            else {
-                this.setState({
-                    allItems: selectedItems,
-                    error: 'Oops... we did not find anything that matches this search'
-                })
-            }
+        db.collection('post').onSnapshot((items)=> {
+            items.docChanges().forEach((post)=> {
+                var item = post.doc.data();
+                if ((Number(min) || 0) <= Number(item.price) && (Number(max) || 10000000) >= Number(item.price) && selectedCategory.indexOf(item.category) != -1){
+                    allItems.push(item);
+                    this.setState({allItems: allItems});
+                }
+            })
         })
     }
 
-    selectedData(e) {
-        this.setState({ values: e.target.value });
+    detail(v){
+        this.props.history.push('/post');
+        localStorage.setItem('item', JSON.stringify(v));
     }
-    loadSelectedC(){
-        var selectedC = [];
-        var categories = this.state.values;
-        var allItems = this.state.allItems;
-        console.log(categories);
-        for(var i = 0; i < allItems.length; i++){
-          for(var j = 0; j< categories.length; j++){
-              if(allItems[i].category === categories[j]){
-                  selectedC.push(allItems[i]);
-               this.setState({allItems: selectedC});
-              }
-          }
-        }
-        console.log(selectedC);
 
+    selectedData(e) {
+        this.setState({selectedCategory: e.target.value});
     }
+
     render() {
         return (
             <div>
@@ -118,21 +91,13 @@ class ViewAllItems extends Component {
                             <TextField label="Max" type='number'
                                        style={{width: '100px' , backgroundColor: '#ebeeef', margin: '0 8px 0 0'}}
                                        value={this.state.maxValue} onChange={this.maxValue.bind(this)}/>
-
-                            <div style={{display: 'inline'}} onClick={this.loadSelectedData.bind(this)}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     id='icon'>
-                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                                    <path fill="none" d="M0 0h24v24H0V0z"/>
-                                </svg>
-                            </div>
                         </div>
                         <div>
-                            <FormControl style={{ minWidth: 230, maxWidth: 300}}>
+                            <FormControl style={{ minWidth: 200, maxWidth: 300}}>
                                 <InputLabel htmlFor="select-multiple-chip">Select Category</InputLabel>
                                 <Select
                                     multiple
-                                    value={this.state.values}
+                                    value={this.state.selectedCategory}
                                     onChange={this.selectedData.bind(this)}
                                     input={<Input id="select-multiple-chip" />}
                                     renderValue={selected => (
@@ -147,7 +112,7 @@ class ViewAllItems extends Component {
                                 </Select>
                             </FormControl>
                         </div>
-                        <div style={{display: 'inline'}} onClick={this.loadSelectedC.bind(this)}>
+                        <div style={{display: 'inline'}} onClick={this.loadAllItems.bind(this)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                  id='icon'>
                                 <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
@@ -156,34 +121,38 @@ class ViewAllItems extends Component {
                         </div>
                     </GridListTile>
                     <GridListTile cols={3}>
-                        <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
-                            {this.state.allItems.map((item) => {
-                                return (
-                                    <Card key={item.time}
-                                          style={{ width:"30%", cursor: 'pointer', border:"solid 1px #bebebe", borderRadius:"0px", margin:"2px", boxShadow:"none"}}
-                                          onClick={this.detail.bind(this , item)}>
-                                        <CardActionArea>
-                                            <CardMedia component="img" alt="Picture not found"
-                                                       height="140" image={item.image} title="Contemplative Reptile"/>
-                                            <CardContent>
-                                                <Typography gutterBottom variant="h5" component="h2">
-                                                    Rs. {item.price}
-                                                </Typography>
-                                                <Typography component="p">
-                                                    {item.description}
-                                                </Typography>
-                                            </CardContent>
-                                        </CardActionArea>
-                                    </Card>
-                                )
-                            })}
-                        </div>
+                        {this.state.allItems.length !== 0 ?
+                            <div style={{display:"flex", flexWrap:"wrap",  justifyContent: "center"}}>
+                                {this.state.allItems.map((item) => {
+                                    return (
+                                        <Card key={item.time}
+                                              style={{ width:"30%", cursor: 'pointer', border:"solid 1px #bebebe", borderRadius:"0px", margin:"2px", boxShadow:"none"}}
+                                              onClick={this.detail.bind(this , item)}>
+                                            <CardActionArea>
+                                                <CardMedia component="img" alt="Picture not found"
+                                                           height="140" image={item.image}
+                                                           title="Contemplative Reptile"/>
+                                                <CardContent>
+                                                    <Typography color="textSecondary" gutterBottom>
+                                                      {item.category}
+                                                    </Typography>
+                                                    <Typography gutterBottom variant="h5" component="h2">
+                                                        Rs. {item.price}
+                                                    </Typography>
+                                                    <Typography component="p">
+                                                        {item.description}
+                                                    </Typography>
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </Card>
+                                    )
+                                })}
+                            </div> : <h1>{this.state.error}</h1>}
                     </GridListTile>
                 </GridList>
 
             </div>
         )
     }
-
 }
 export default ViewAllItems;

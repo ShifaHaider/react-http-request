@@ -118,9 +118,9 @@ class ToolBar extends Component {
         }, ()=> {
             uploadTask.snapshot.ref.getDownloadURL().then((downloadURL)=> {
                 console.log(downloadURL);
-                this.setState({image: downloadURL , loading: false});
+                this.setState({image: downloadURL, loading: false});
+                this.disableButton();
             });
-            this.disableButton();
         });
     }
 
@@ -258,14 +258,16 @@ class ToolBar extends Component {
                                    value={this.state.description} onChange={this.description.bind(this)}/>
                         <TextField multiple autoFocus margin="dense" id="title" label="Select Image" type="file"
                                    fullWidth onChange={this.uploadFile.bind(this)}/><br/><br/>
+
                         <div style={{textAlign: 'center'}}>
-                        {this.state.loading ? <CircularProgress color="primary" style={{textAlign: 'center'}}/> : null}
+                            {this.state.loading ?
+                                <CircularProgress color="primary" style={{textAlign: 'center'}}/> : null}
                         </div>
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={this.modelClose.bind(this)} color="primary">Cencel</Button>
                         <Button onClick={this.sendPost.bind(this)} variant="contained" color="primary"
-                                disabled={this.state.disabled}>Post</Button>
+                                >Post</Button>
                     </DialogActions>
                 </Dialog>
             </div>
