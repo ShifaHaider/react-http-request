@@ -99,12 +99,13 @@ class ToolBar extends Component {
                 time: Date.now()
             }).then(function () {
                 alert("Document successfully written!");
+                this.setState({open: false, title: '', selectedCategory: '', price: 0, description: ''});
             })
                 .catch(function (error) {
                     alert("Error writing document: ", error);
                 })
-            : alert('Require field');
-        this.setState({open: false, title: '', selectedCategory: '', price: 0, description: ''});
+            : alert('Require field...!');
+        //this.setState({open: false, title: '', selectedCategory: '', price: 0, description: ''});
     }
 
     uploadFile(e) {

@@ -29,7 +29,7 @@ class LocationSearchInput extends Component {
     location(e){
         var address = e.target.value;
         //Geocode.setApiKey("AIzaSyBdHhIcbrK8mp4xudA2O0SOa7vZL-tytic");
-        Geocode.setApiKey("AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI");
+        Geocode.setApiKey("AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78");
         Geocode.enableDebug();
         console.log(Geocode.fromAddress("karachi"));
         Geocode.fromAddress("Eiffel Tower").then((response) => {
@@ -56,7 +56,7 @@ class LocationSearchInput extends Component {
 
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'AIzaSyAJeJ7KJO8AoQe5KYjPrnX_O_TqkEb_FjI' }}
+                    bootstrapURLKeys={{ key: 'AIzaSyBUSnrEYsPlAa9LH98TYEX0MtqGZqF2E78' }}
                     defaultCenter={this.state.center} defaultZoom={this.state.zoom}>
                     <AnyReactComponent lat={59.955413} lng={30.337844} text={'Kreyser Avrora'}/>
                 </GoogleMapReact>
