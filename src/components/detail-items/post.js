@@ -59,7 +59,7 @@ class Post extends Component {
             </div>
         )
     }
-}h
+}
 export default Post;
 
 
