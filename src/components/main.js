@@ -9,6 +9,10 @@ import TextField from '@material-ui/core/TextField';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import AddIcon from '@material-ui/icons/Add';
+import Avatar from '@material-ui/core/Avatar';
 import firebase from 'firebase'
 
 const styles = {
@@ -60,7 +64,28 @@ class Main extends Component {
             })
         )
     }
-
+    loginFacebook() {
+        const db = firebase.firestore();
+        const settings = {timestampsInSnapshots: true};
+        db.settings(settings);
+        var provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider).then((result) => {
+            console.log(result);
+            var data = {};
+            data.name = result.additionalUserInfo.profile.name;
+            data.email = result.additionalUserInfo.profile.email || '';
+            data.phone = result.additionalUserInfo.profile.phone || '';
+            data.id = result.user.uid;
+            console.log(data);
+            //localStorage.setItem('userProfile' ,  profile.picture || null);
+            db.collection('Users').doc(data.id).set(data);
+            localStorage.setItem('userID' , data.id);
+            this.props.history.push('/category');
+        }).catch((function (error) {
+                alert(error);
+            })
+        )
+    }
     render() {
         return (
             <div >
@@ -86,10 +111,18 @@ class Main extends Component {
                             </Button>
                         </ListItem>
                         <ListItem>
-                            <Button variant="extendedFab" aria-label="Delete" >
+                            <Button variant="extendedFab" aria-label="Delete" onClick={this.loginFacebook.bind(this)}>
                                 <NavigationIcon />
                                 SignIn with facebook
                             </Button>
+                        </ListItem>
+                        <ListItem button onClick={() => this.handleClose('addAccount')}>
+                            <ListItemAvatar>
+                                <Avatar>
+                                    <AddIcon />
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText primary="add account" />
                         </ListItem>
                     </List>
                     <DialogActions>

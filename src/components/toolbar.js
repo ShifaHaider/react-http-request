@@ -20,7 +20,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import PersonIcon from '@material-ui/icons/Person';
+import './person-icon.png'
 class ToolBar extends Component {
 
     constructor(props) {
@@ -99,13 +100,12 @@ class ToolBar extends Component {
                 time: Date.now()
             }).then(function () {
                 alert("Document successfully written!");
-                this.setState({open: false, title: '', selectedCategory: '', price: 0, description: ''});
+                //this.setState({open: false, title: '', selectedCategory: '', price: 0, description: ''});
             })
                 .catch(function (error) {
                     alert("Error writing document: ", error);
-                })
-            : alert('Require field...!');
-        //this.setState({open: false, title: '', selectedCategory: '', price: 0, description: ''});
+                }) : alert('Require field...!');
+        this.setState({open: false, title: '', selectedCategory: '', price: 0, description: ''});
     }
 
     uploadFile(e) {
@@ -235,7 +235,6 @@ class ToolBar extends Component {
                         </Menu>
                     </Toolbar>
                 </AppBar>
-
                 <Dialog open={this.state.open} onClose={this.handleClose.bind(this)}
                         aria-labelledby="form-dialog-title">
                     <DialogContent>
@@ -264,6 +263,7 @@ class ToolBar extends Component {
                             {this.state.loading ?
                                 <CircularProgress color="primary" style={{textAlign: 'center'}}/> : null}
                         </div>
+
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={this.modelClose.bind(this)} color="primary">Cencel</Button>
