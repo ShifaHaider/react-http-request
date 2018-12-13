@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca401412-2c9e-44fc-9a2b-4e95cca66c69" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\project\react-http-request\src\components\google-map.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\react-http-request\src\components\index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\auto-complete.js" afterPath="$PROJECT_DIR$/src/components/auto-complete/auto-complete.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\category.js" afterPath="$PROJECT_DIR$/src/components/category/category.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\drawer.js" afterPath="$PROJECT_DIR$/src/components/toolbar/drawer.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\edit-profile.js" afterPath="$PROJECT_DIR$/src/components/profile/edit-profile.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\main.js" afterPath="$PROJECT_DIR$/src/components/main/main.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\min-max.js" afterPath="$PROJECT_DIR$/src/components/min-max/min-max.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\my-profile.js" afterPath="$PROJECT_DIR$/src/components/profile/my-profile.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\navbar.js" afterPath="$PROJECT_DIR$/src/components/toolbar/navbar.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\post.js" afterPath="$PROJECT_DIR$/src/components/detail-items/post.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\toolbar.js" afterPath="$PROJECT_DIR$/src/components/toolbar/toolbar.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\view-all-items.js" afterPath="$PROJECT_DIR$/src/components/view-all-items/view-all-items.js" />
-      <change type="MOVED" beforePath="D:\project\react-http-request\src\components\view-item.js" afterPath="$PROJECT_DIR$/src/components/view-items/view-item.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/detail-items/post.js" afterPath="$PROJECT_DIR$/src/components/detail-items/post.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -110,8 +95,8 @@
       <file leaf-file-name="post.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/detail-items/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8859375">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.8140625">
+              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -799,8 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/detail-items/post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8859375">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.8140625">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
           <folding />
         </state>
       </provider>
