@@ -11,7 +11,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import firebase from 'firebase'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import ViewItem from './view-item.js'
+import ViewItem from './../view-items/view-item.js'
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -21,7 +21,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import PersonIcon from '@material-ui/icons/Person';
-import './person-icon.png'
+import './../person-icon.png'
 class ToolBar extends Component {
 
     constructor(props) {

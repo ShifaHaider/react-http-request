@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import ToolBar from './toolbar.js'
+import ToolBar from './../toolbar/toolbar.js'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import firebase from 'firebase'
-import './style.css'
+import './../style.css'
 
 class EditProfile extends Component {
 

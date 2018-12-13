@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import firebase from 'firebase'
-import ToolBar from './toolbar.js'
+import ToolBar from './../toolbar/toolbar.js'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';

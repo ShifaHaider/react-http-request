@@ -1,11 +1,11 @@
 import React, { Component } from "react"
-import ToolBar from './navbar.js';
+import ToolBar from './../toolbar/navbar.js';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import './style.css'
+import './../style.css'
 
 class Post extends Component {
 
@@ -61,4 +61,11 @@ class Post extends Component {
     }
 }
 export default Post;
+
+
+
+
+
+
+
 helloooooooooooooooooooooooooooooooo

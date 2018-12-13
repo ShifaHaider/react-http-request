@@ -4,17 +4,17 @@ import './App.css';
 import {Router, Route, Switch, Link} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 import firebase from 'firebase'
-import Main from './components/main.js';
-import Post from './components/post.js'
-import ToolBar from './components/toolbar.js'
-import ViewItems from './components/view-item.js'
-import Drawer2 from './components/drawer.js';
-import MyProfile from './components/my-profile.js';
-import Category from './components/category.js';
-import EditProfile from './components/edit-profile.js';
-import LocationSearchInput from './components/auto-complete.js';
-import ViewAllItems from './components/view-all-items.js';
-import MinMax from './components/min-max.js'
+import Main from './components/main/main.js';
+import Post from './components/detail-items/post.js'
+import ToolBar from './components/toolbar/toolbar.js'
+import ViewItems from './components/view-items/view-item.js'
+import Drawer2 from './components/toolbar/drawer.js';
+import MyProfile from './components/profile/my-profile.js';
+import Category from './components/category/category.js';
+import EditProfile from './components/profile/edit-profile.js';
+import LocationSearchInput from './components/auto-complete/auto-complete.js';
+import ViewAllItems from './components/view-all-items/view-all-items.js';
+import MinMax from './components/min-max/min-max.js'
 
 
 //import First from "./routes/first-route"

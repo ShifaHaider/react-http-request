@@ -12,8 +12,8 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import ToolBar from './toolbar.js'
-import './style.css'
+import ToolBar from './../toolbar/toolbar.js'
+import './../style.css'
 
 
 class ViewItems extends Component {
