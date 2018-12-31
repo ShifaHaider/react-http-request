@@ -57,6 +57,3 @@ class Express extends Component {
 }
 // https://dashboard.heroku.com/apps/sadcsad/deploy/heroku-git
 export default Express;
-// hm jis application pr kaam kr rhey hotey hen wo client side hota hai yani jahan sey req bhej rhey hen,
-//or server wo hota hai jahan sey data aarha hota hai jesey ye application client hai or "express server" app
-//server hai.

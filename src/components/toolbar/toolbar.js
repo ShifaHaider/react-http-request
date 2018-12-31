@@ -21,6 +21,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import PersonIcon from '@material-ui/icons/Person';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 import './../person-icon.png'
 class ToolBar extends Component {
 
@@ -151,7 +153,7 @@ class ToolBar extends Component {
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="h6" color="inherit">
-                            My-OLX
+                            My - OLX
                         </Typography>
 
                         <div style={{ position: 'absolute', right: '10px' }}>
@@ -237,6 +239,10 @@ class ToolBar extends Component {
                 </AppBar>
                 <Dialog open={this.state.open} onClose={this.handleClose.bind(this)}
                         aria-labelledby="form-dialog-title">
+                    <IconButton aria-label="Close" onClick={this.modelClose.bind(this)}
+                                style={{position: 'absolute' , top: '5px',  right: '5px' }}>
+                        <CloseIcon />
+                    </IconButton><br/><br/>
                     <DialogContent>
                         <TextField autoFocus margin="dense" id="title" label="Title" type="text" fullWidth
                                    value={this.state.title} onChange={this.titleChange.bind(this)}/>
@@ -266,9 +272,7 @@ class ToolBar extends Component {
 
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={this.modelClose.bind(this)} color="primary">Cencel</Button>
-                        <Button onClick={this.sendPost.bind(this)} variant="contained" color="primary"
-                                >Post</Button>
+                        <Button onClick={this.sendPost.bind(this)} variant="contained" color="primary">Post</Button>
                     </DialogActions>
                 </Dialog>
             </div>

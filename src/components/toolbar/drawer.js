@@ -44,60 +44,79 @@ class Drawer2 extends Component {
         return (
 
             <div className={classes.root}>
-                <CssBaseline />
-                <AppBar position="fixed" className={classes.appBar}>
-                    <Toolbar>
-                        <Typography variant="h6" color="inherit" noWrap>
-                            Clipped drawer
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-                <Drawer className={classes.drawer} variant="permanent" classes={{paper: classes.drawerPaper}}>
-                    <div className={classes.toolbar}/>
-                    <List>
-                        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text}/>
+                <Dialog
+                    onClose={this.modelClose.bind(this)}
+                    aria-labelledby="customized-dialog-title"
+                    open={this.state.openModel}>
+                    <DialogTitle id="customized-dialog-title" onClose={this.modelClose.bind(this)}>
+                        Create Account
+                    </DialogTitle>
+                    <DialogContent>
+                        <List>
+                            <ListItem>
+                                <TextField autoFocus margin="dense" id="title" label="Name" type="text"
+                                           value={this.state.name} onChange={this.nameChange.bind(this)}/><br/>
                             </ListItem>
-                        ))}
-                    </List>
-                    <Divider />
-                    <List>
-                        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text}/>
+                            <ListItem>
+                                <TextField autoFocus margin="dense" id="title" label="Email" type="text"
+                                           value={this.state.email} onChange={this.emailChange.bind(this)}/><br/>
                             </ListItem>
-                        ))}
-                    </List>
-                </Drawer>
-                <main className={classes.content}>
-                    <div className={classes.toolbar}/>
-                    <Typography paragraph>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-                        facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-                        gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-                        donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                        adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-                        Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-                        imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-                        arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-                        donec massa sapien faucibus et molestie ac.
-                    </Typography>
-                    <Typography paragraph>
-                        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-                        facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-                        tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-                        consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-                        vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-                        hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-                        tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-                        nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-                        accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-                    </Typography>
-                </main>
+                            <ListItem>
+                                <TextField autoFocus margin="dense" id="title" label="Password" type="password"
+                                           value={this.state.password} onChange={this.passwordChange.bind(this)}/><br/>
+                            </ListItem>
+                            <ListItem>
+                                <TextField autoFocus margin="dense" id="title" label="Phone" type="number"
+                                           value={this.state.phone} onChange={this.phoneChange.bind(this)}/>
+                            </ListItem>
+                        </List>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button color="primary" onClick={this.modelClose.bind(this)}>
+                            Cancel
+                        </Button>
+                        <Button onClick={this.addAccount.bind(this)} color="primary" variant="contained">
+                            Add Account
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+
+                <Dialog
+                    onClose={this.loginModelClose.bind(this)}
+                    aria-labelledby="customized-dialog-title"
+                    open={this.state.loginModel}>
+                    <DialogTitle id="customized-dialog-title" onClose={this.loginModelClose.bind(this)}>
+                        Login
+                    </DialogTitle>
+                    <DialogContent>
+                        <List>
+                            <ListItem>
+                                <TextField autoFocus margin="dense" id="title" label="Email" type="text" fullWidth
+                                           value={this.state.logEmail} onChange={this.loginEmail.bind(this)}/>
+                            </ListItem>
+                            <ListItem>
+                                <TextField autoFocus margin="dense" id="title" label="Password" type="password" fullWidth
+                                           value={this.state.logPassword} onChange={this.loginPassword.bind(this)}/>
+                            </ListItem><br/>
+                            <ListItem button onClick={this.handleOpen.bind(this)}>
+                                <ListItemAvatar>
+                                    <Avatar>
+                                        <AddIcon/>
+                                    </Avatar>
+                                </ListItemAvatar>
+                                <ListItemText primary="Create Account" onClick={this.handleOpen.bind(this)}/>
+                            </ListItem>
+                        </List>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button color="primary" onClick={this.loginModelClose.bind(this)}>
+                            Cancel
+                        </Button>
+                        <Button onClick={this.loginAccount.bind(this)} color="primary" variant="contained">
+                            Add
+                        </Button>
+                    </DialogActions>
+                </Dialog>
             </div>
         )
     }

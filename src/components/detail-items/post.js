@@ -27,7 +27,7 @@ class Post extends Component {
                         </div>
                         <Card style={{width : '500px', marginTop: 10}}>
                             <CardContent>
-                                <Typography variant="h5" component="h2">Description</Typography>
+                                <Typography variant="h5" component="h2">Description</Typography><br/>
                                 <Typography component="p">{this.item.description}</Typography>
                             </CardContent>
                         </Card>
@@ -36,19 +36,27 @@ class Post extends Component {
 
                         <Card style={{ margin: 10}}>
                             <CardContent>
-                                <Typography variant="h5" component="h2">Rs. {this.item.price}</Typography>
+                                <Typography variant="h4 " component="h1">Rs. {this.item.price}</Typography><br/>
                                 <Typography component="p">{this.item.description}</Typography>
                             </CardContent>
                         </Card>
                         <Card style={{ margin: 10}}>
                             <CardContent>
-                                <Typography variant="h5" component="h2">Contact the seller</Typography>
+                                <Typography variant="h5" component="h2">Contact the seller</Typography><br/>
                                 <Typography component="h5">Shifa Haider</Typography>
                             </CardContent>
+                            <CardActions>
+                                <Button color="primary" variant="contained" size="large" >
+                                    Chat
+                                </Button>
+                                <Button color="primary" variant="outlined" size="large">
+                                    Call
+                                </Button>
+                            </CardActions>
                         </Card>
                         <Card style={{ margin: 10}}>
                             <CardContent>
-                                <Typography variant="h5" component="h2">Posted in</Typography>
+                                <Typography variant="h5" component="h2">Posted in</Typography><br/>
                                 <Typography component="p">Karachi</Typography>
                             </CardContent>
                         </Card>
